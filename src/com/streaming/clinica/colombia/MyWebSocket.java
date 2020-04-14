@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.SubmissionPublisher;
 
 import javax.imageio.ImageIO;
 import javax.websocket.OnClose;
@@ -56,15 +57,16 @@ public class MyWebSocket {
 		System.out.println("onOpen::" + session.getId());
 
 		try {
-
-			Dimension size = WebcamResolution.QVGA.getSize();
+			 
+//			Dimension size = WebcamResolution.QVGA.getSize();
+			Dimension size = WebcamResolution.HD.getSize();
 			//
 			//        			writer.addVideoStream(0, 0, ICodec.ID.CODEC_ID_H264, size.width, size.height);
 			List<Webcam> we = Webcam.getWebcams();
 
 
-//			Webcam webcam = Webcam.getDefault();
-			        			Webcam webcam = (Webcam)we.stream().filter(x->{ return x.getName().contains("LifeCam") ; }).toArray()[0];
+			Webcam webcam = Webcam.getDefault();
+//			        			Webcam webcam = (Webcam)we.stream().filter(x->{ return x.getName().contains("LifeCam") ; }).toArray()[0];
 			webcam.setViewSize(size);
 			webcam.open(true);
 
