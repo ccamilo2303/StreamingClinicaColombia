@@ -23,9 +23,9 @@ public class WebCamServiceImpl implements WebCamServiceInterface {
 		System.out.println("Va a iniciar camara ...");
 
 		Dimension size = ConfigurationConst.SIZE;
-//		webcam = Webcam.getDefault();
-		List<Webcam> we = Webcam.getWebcams();
-		webcam = (Webcam)we.stream().filter(x->{ return x.getName().contains("LifeCam") ; }).toArray()[0];
+		webcam = Webcam.getDefault();
+//		List<Webcam> we = Webcam.getWebcams();
+//		webcam = (Webcam)we.stream().filter(x->{ return x.getName().contains("LifeCam") ; }).toArray()[0];
 		webcam.setViewSize(size);
 		webcam.open(true);
 		System.out.println("Inicia Camara: "+webcam.getName()+" ...");
