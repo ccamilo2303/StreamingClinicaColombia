@@ -58,8 +58,8 @@ public class MyWebSocket {
 
 		try {
 			 
-//			Dimension size = WebcamResolution.QVGA.getSize();
-			Dimension size = WebcamResolution.HD.getSize();
+			Dimension size = WebcamResolution.QVGA.getSize();
+//			Dimension size = WebcamResolution.HD.getSize();
 			//
 			//        			writer.addVideoStream(0, 0, ICodec.ID.CODEC_ID_H264, size.width, size.height);
 			List<Webcam> we = Webcam.getWebcams();

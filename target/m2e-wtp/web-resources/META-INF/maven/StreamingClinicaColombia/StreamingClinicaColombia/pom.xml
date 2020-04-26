@@ -19,11 +19,10 @@
 	</repositories>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.github.sarxos</groupId>
-			<artifactId>webcam-capture</artifactId>
-			<version>0.3.12</version>
-		</dependency>
+
+
+		<!-- <dependency> <groupId>com.github.sarxos</groupId> <artifactId>webcam-capture</artifactId> 
+			<version>0.3.12</version> </dependency> -->
 
 		<dependency>
 			<groupId>xuggle</groupId>
@@ -31,6 +30,39 @@
 			<version>5.4</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.github.sarxos</groupId>
+			<artifactId>webcam-capture</artifactId>
+			<version>0.3.12</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.sarxos</groupId>
+			<artifactId>webcam-capture-driver-v4l4j</artifactId>
+			<version>0.3.11</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.github.sarxos</groupId>
+			<artifactId>v4l4j</artifactId>
+			<version>0.9.1-r507</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>org.wildfly.core</groupId>
+			<artifactId>wildfly-server</artifactId>
+			<version>2.2.0.Final</version>
+			<scope>provided</scope>
+		</dependency>
 
 	</dependencies>
 

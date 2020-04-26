@@ -5,6 +5,7 @@ import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
 import com.streaming.clinica.colombia.publisher.PublisherServer;
+import com.streaming.clinica.colombia.service.SocketClienteService;
 import com.streaming.clinica.colombia.subscriber.ClientSubscriber;
 
 /**
@@ -14,11 +15,16 @@ import com.streaming.clinica.colombia.subscriber.ClientSubscriber;
 @ServerEndpoint("/live")
 public class WebSocketServer {
 
-	
+
 	@OnOpen
 	public void onOpen(Session session) {
-		
+		System.out.println("ENTRÓ ...");
 		PublisherServer.PUBLISHER.subscribe(new ClientSubscriber(session));
+		try {
+			SocketClienteService.getInstance();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-	
+
 }
